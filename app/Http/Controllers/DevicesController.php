@@ -15,6 +15,7 @@ class DevicesController extends Controller
     public function index()
     {
         $devices = Device::all();
+
         return view('devices.index',compact('devices'));
 
     }
