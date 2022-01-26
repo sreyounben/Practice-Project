@@ -3,6 +3,7 @@
 /public/storage
 /storage/*.key
 /vendor
+/Rotana
 .env
 .env.backup
 .phpunit.result.cache
