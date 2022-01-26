@@ -44,6 +44,6 @@ Route::get('form', [CountryController::class, 'index']);
 // Route::get('/devices',[DevicesController::class, 'index']);
 
 
-Route::get('devices',[DevicesController::class,'index']);
-Route::get('devices/create',[DevicesController::class, 'create']);
-Route::post('devicesaction',[DevicesController::class, 'store']);
+Route::get('/devices',[DevicesController::class,'index']);
+Route::get('/devices/create',[DevicesController::class, 'create']);
+Route::post('/devicesaction',[DevicesController::class, 'storeDevice']);

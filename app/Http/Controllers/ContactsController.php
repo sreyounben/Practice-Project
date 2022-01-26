@@ -2,10 +2,10 @@
 
 namespace App\Http\Controllers;
 
-use App\Models\Device;
+use App\Models\Contact;
 use Illuminate\Http\Request;
 
-class DevicesController extends Controller
+class ContactsController extends Controller
 {
     /**
      * Display a listing of the resource.
@@ -14,10 +14,7 @@ class DevicesController extends Controller
      */
     public function index()
     {
-        $devices = Device::all();
-
-        return view('devices.index',compact('devices'));
-
+        return view('contact');
     }
 
     /**
@@ -27,8 +24,7 @@ class DevicesController extends Controller
      */
     public function create()
     {
-        return view('devices.create');
-
+        //
     }
 
     /**
@@ -37,25 +33,18 @@ class DevicesController extends Controller
      * @param  \Illuminate\Http\Request  $request
      * @return \Illuminate\Http\Response
      */
-    public function storeDevice()
+    public function storeContact(Request $request)
     {
-        $device = new Device();
-
-        $device->name = request('name');
-        $device->description = request('description');
-
-        $device->save();
-
-        return redirect()->back()->with('status','device Added Successfully');
+            
     }
 
     /**
      * Display the specified resource.
      *
-     * @param  int  $id
+     * @param  \App\Models\Contact  $contact
      * @return \Illuminate\Http\Response
      */
-    public function show($id)
+    public function show(Contact $contact)
     {
         //
     }
@@ -63,10 +52,10 @@ class DevicesController extends Controller
     /**
      * Show the form for editing the specified resource.
      *
-     * @param  int  $id
+     * @param  \App\Models\Contact  $contact
      * @return \Illuminate\Http\Response
      */
-    public function edit($id)
+    public function edit(Contact $contact)
     {
         //
     }
@@ -75,10 +64,10 @@ class DevicesController extends Controller
      * Update the specified resource in storage.
      *
      * @param  \Illuminate\Http\Request  $request
-     * @param  int  $id
+     * @param  \App\Models\Contact  $contact
      * @return \Illuminate\Http\Response
      */
-    public function update(Request $request, $id)
+    public function update(Request $request, Contact $contact)
     {
         //
     }
@@ -86,10 +75,10 @@ class DevicesController extends Controller
     /**
      * Remove the specified resource from storage.
      *
-     * @param  int  $id
+     * @param  \App\Models\Contact  $contact
      * @return \Illuminate\Http\Response
      */
-    public function destroy($id)
+    public function destroy(Contact $contact)
     {
         //
     }
